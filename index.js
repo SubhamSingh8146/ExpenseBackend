@@ -13,7 +13,7 @@ const uri = process.env.MONGODB_URI;
 app.use(express.json());
 
 const cors = require('cors');
-app.use(cors({ origin: 'https://expense-frontend-chi.vercel.app' }));
+app.use(cors());
 
 app.use(morgan('dev'));
 
