@@ -12,8 +12,8 @@ const uri = process.env.MONGODB_URI;
 
 app.use(express.json());
 
-app.use(cors()); // ⚠️ Allows ALL origins — only use in dev
-
+const cors = require('cors');
+app.use(cors({ origin: 'https://expense-frontend-chi.vercel.app' }));
 
 app.use(morgan('dev'));
 
